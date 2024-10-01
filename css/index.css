@@ -1,0 +1,206 @@
+/* Custom Styles */
+
+/* Hero Section Styling */
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid white;
+  margin: 20px auto;
+}
+
+.hero-section {
+  position: relative; /* Ensure stacking with carousel */
+  padding: 100px 0; /* Increase the height */
+  color: #e9efec; /* Light text for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 85vh; /* Full height */
+  z-index: 2; /* Ensure it's above the carousel */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 3; /* Keep the text on top of the background carousel */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 3rem; /* Large title */
+  color: #e9efec; /* Light color for contrast */
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  color: #c4dad2; /* Light grayish teal for contrast */
+}
+
+/* Background Carousel */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  z-index: 1; /* Place behind the hero section */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 85vh; /* Full height */
+  object-fit: cover; /* Ensure the image covers the entire background */
+}
+
+/* Image Hover Effect */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.img-container img {
+  width: 100%; /* Make the image take up the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img-container:hover img {
+  transform: scale(1.1); /* Zoom-in effect */
+  filter: brightness(90%); /* Slightly darken the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow */
+}
+
+/* Overlay Text */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+  color: #e9efec; /* Light color for overlay text */
+  text-align: center;
+  padding: 20px;
+}
+
+.img-container:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.text {
+  font-size: 1.25rem; /* Adjust text size as needed */
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #16423c; /* Dark teal footer */
+  color: #c4dad2; /* Light grayish teal */
+  font-size: 0.9rem;
+}
+
+/* Navbar Adjustments */
+.navbar {
+  padding: 1.5rem 0; /* More padding for a larger navbar */
+  background-color: #16423c; /* Dark teal navbar */
+}
+.navbar-toggler {
+  border-color: #e9efec; /* Light border color */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #e9efec; /* Light color for navbar links */
+}
+
+.navbar-brand {
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: #e9efec; /* Light color for brand */
+}
+
+.btn-outline-light {
+  border-color: #e9efec; /* Light color for button border */
+  color: #e9efec; /* Light color for button text */
+}
+
+.btn-outline-light:hover {
+  background-color: #e9efec; /* Light color for hover background */
+  color: #16423c; /* Dark teal for text on hover */
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+
+.overlay .details {
+  font-size: 1rem; /* Adjust text size as needed */
+  color: #e9efec; /* Light color for details text */
+  cursor: pointer; /* Change cursor to pointer */
+  margin-top: 10px; /* Add space above */
+}
+
+.modal-content {
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.modal-header {
+  background-color: #16423c; /* Bootstrap primary color */
+  color: white; /* White text */
+}
+
+.modal-footer {
+  background-color: #e9ecef; /* Light gray footer */
+}
+.custom-button {
+  background-color: #16423C; /* Green background */
+  color: white; /* White text */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Custom padding */
+  border: none; /* Remove border */
+}
+
+.custom-button:hover {
+  background-color: #C4DAD2; /* Darker green on hover */
+}
+
+.custom-map-btn {
+  background-color: #16423C; /* Custom blue background */
+  color: white; /* White text */
+  border-radius: 5px; /* Slightly rounded corners */
+  padding: 10px 20px; /* Custom padding */
+  border: none; /* Remove border */
+}
+
+.custom-map-btn:hover {
+  background-color: #C4DAD2; /* Darker blue on hover */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically centers the content */
+}
+
+.close {
+  margin-left: auto; /* Pushes the close button to the right */
+}
+

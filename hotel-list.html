@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels in Butuan City</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .hotel-list {
+            display: none;
+        }
+        .hotel-card img {
+            width: 100%;
+            height: auto;
+        }
+        .hotel-card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">HoBo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-outline-light" href="#">Sign in</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="vh-100 gradient-custom" style="background-color: #084c4f; color: white;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 text-center">
+            <div class="col-lg-8">
+                <h1 class="fw-bold mb-3">Comfort and Stay at Hotels in Butuan City</h1>
+                <p class="lead mb-4">Experience unmatched comfort and hospitality at the finest hotels in Butuan City! Whether you're here for business or leisure, our luxurious accommodations and world-class service ensure an unforgettable stay. Discover a blend of modern amenities and warm, local charm – book your stay today and elevate your Butuan City experience!</p>
+                <button id="browse-btn" class="btn btn-outline-light btn-lg">Browse Hotel</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hotel List Section -->
+<section id="hotel-list-section" class="container hotel-list mt-5">
+    <div class="row">
+        <!-- Hotel Card 1 -->
+        <div class="col-md-4">
+            <div class="card hotel-card">
+                <img src="file-qT3FztvdEl8C8dD5GGK42WiL" class="card-img-top" alt="Hotel 1">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel 1</h5>
+                    <p class="card-text">A luxurious hotel with modern amenities and stunning views.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hotel Card 2 -->
+        <div class="col-md-4">
+            <div class="card hotel-card">
+                <img src="file-qT3FztvdEl8C8dD5GGK42WiL" class="card-img-top" alt="Hotel 2">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel 2</h5>
+                    <p class="card-text">Enjoy a relaxing stay with world-class service and comfort.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Hotel Card 3 -->
+        <div class="col-md-4">
+            <div class="card hotel-card">
+                <img src="file-qT3FztvdEl8C8dD5GGK42WiL" class="card-img-top" alt="Hotel 3">
+                <div class="card-body">
+                    <h5 class="card-title">Hotel 3</h5>
+                    <p class="card-text">A top destination for travelers looking for style and elegance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript to toggle hotel list -->
+<script>
+    $(document).ready(function() {
+        $('#browse-btn').click(function() {
+            $('#hotel-list-section').slideToggle(); // Toggle the hotel list visibility
+        });
+    });
+</script>
+
+</body>
+</html>

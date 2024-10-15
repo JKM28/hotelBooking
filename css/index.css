@@ -26,7 +26,12 @@
   position: relative;
   z-index: 3; /* Keep the text on top of the background carousel */
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for text readability */
   border-radius: 10px;
 }
 
@@ -112,11 +117,46 @@
 
 /* Navbar Adjustments */
 .navbar {
-  padding: 1.5rem 0; /* More padding for a larger navbar */
-  background-color: #16423c; /* Dark teal navbar */
+  position: relative; /* Make the navbar position relative */
+  padding-top: 0.5rem; /* Adjust this value to your preference */
+  padding-bottom: 0.5rem;
+  background-color: #16423c; /* Base dark teal color */
+  color: white; /* Set text color to white for better contrast */
 }
+
+.navbar::after {
+  content: "";
+  position: absolute; /* Position the overlay absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 0; /* Send the overlay behind the text */
+}
+
+.navbar .container {
+  position: relative; /* Make the container relative */
+  z-index: 1; /* Ensure text appears above overlay */
+}
+
+/* Additional styles for navbar links, hover effects, etc. */
+.navbar a {
+  color: white; /* Ensure links are white */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Add underline on hover for better UX */
+}
+
 .navbar-toggler {
   border-color: #e9efec; /* Light border color */
+}
+
+.navbar-brand img {
+  height: 40px; /* Reduced height to avoid excessive navbar expansion */
+  /* Space between logo and text */
 }
 
 .navbar-nav .nav-link {
@@ -124,12 +164,19 @@
   padding-left: 1rem;
   padding-right: 1rem;
   color: #e9efec; /* Light color for navbar links */
+  padding: 0.5rem 1rem; /* Keep the padding consistent */
 }
 
 .navbar-brand {
-  font-size: 2.75rem;
+  font-size: 2.25rem; /* Slightly reduced font size for better balance */
   font-weight: bold;
   color: #e9efec; /* Light color for brand */
+  line-height: 1; /* Ensures the text aligns well within the navbar */
+}
+
+/* Additional styles for active links */
+.navbar-nav .nav-link.active {
+  color: #fff; /* Optional: change color for active link */
 }
 
 .btn-outline-light {
@@ -171,7 +218,7 @@
   background-color: #e9ecef; /* Light gray footer */
 }
 .custom-button {
-  background-color: #16423C; /* Green background */
+  background-color: #16423c; /* Green background */
   color: white; /* White text */
   border-radius: 5px; /* Slightly rounded corners */
   padding: 10px 20px; /* Custom padding */
@@ -179,11 +226,11 @@
 }
 
 .custom-button:hover {
-  background-color: #C4DAD2; /* Darker green on hover */
+  background-color: #c4dad2; /* Darker green on hover */
 }
 
 .custom-map-btn {
-  background-color: #16423C; /* Custom blue background */
+  background-color: #16423c; /* Custom blue background */
   color: white; /* White text */
   border-radius: 5px; /* Slightly rounded corners */
   padding: 10px 20px; /* Custom padding */
@@ -191,7 +238,7 @@
 }
 
 .custom-map-btn:hover {
-  background-color: #C4DAD2; /* Darker blue on hover */
+  background-color: #c4dad2; /* Darker blue on hover */
 }
 
 .modal-header {
@@ -202,5 +249,222 @@
 
 .close {
   margin-left: auto; /* Pushes the close button to the right */
+}
+
+/* About Section Styles */
+.about-section {
+  position: relative;
+  padding: 5rem 0; /* Add padding for vertical spacing */
+  background-size: cover; /* Cover the entire section */
+  color: #fff; /* Text color */
+  background-color: #16423c;
+}
+
+/* Overlay for better text visibility */
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 1; /* Place overlay above background */
+}
+
+/* Container Styles */
+.container {
+  position: relative; /* Relative positioning for container */
+  z-index: 2; /* Ensure text appears above overlay */
+}
+
+/* Heading Styles */
+.about-section h2 {
+  font-size: 3rem; /* Larger heading */
+  text-align: center; /* Center align the heading */
+  margin-bottom: 1rem; /* Space below heading */
+  animation: fadeIn 1s ease-in; /* Animation effect */
+}
+
+/* Paragraph Styles */
+.about-section p {
+  font-size: 1.2rem; /* Increase font size for readability */
+  line-height: 1.5; /* Line height for better spacing */
+  max-width: 800px; /* Limit width of paragraphs */
+  margin: 0 auto; /* Center align paragraphs */
+  animation: fadeIn 1.5s ease-in; /* Animation effect */
+}
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Set a default font for the body */
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background-color: #f8f9fa; /* Light background color */
+  padding: 50px 0; /* Vertical padding */
+  text-align: center; /* Center text */
+}
+
+.contact-section h2 {
+  font-size: 2.5rem; /* Increase font size for the main heading */
+  color: #16423c; /* Dark teal color */
+  margin-bottom: 1rem; /* Space below heading */
+}
+
+.contact-section h3 {
+  font-size: 1.75rem; /* Size for subheading */
+  color: #333; /* Darker color for subheading */
+  margin-bottom: 1rem; /* Space below subheading */
+}
+
+.contact-section p {
+  color: #555; /* Dark gray for text */
+  margin-bottom: 2rem; /* Space below paragraph */
+}
+
+/* Contact Info Styles */
+.contact-info {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-around; /* Space items evenly */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+  margin-bottom: 2rem; /* Space below contact info */
+}
+
+.info-item {
+  background: white; /* White background for items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  width: 250px; /* Fixed width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation effects */
+}
+
+.info-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.info-item i {
+  font-size: 2rem; /* Icon size */
+  color: #16423c; /* Icon color */
+  margin-bottom: 1rem; /* Space below icon */
+}
+
+/* Social Media Styles */
+.social-media {
+  margin-top: 20px; /* Space above social links */
+}
+
+.social-link {
+  font-size: 2rem; /* Size for social media icons */
+  color: #16423c; /* Icon color */
+  margin: 0 10px; /* Horizontal space between icons */
+  transition: color 0.3s; /* Color transition effect */
+}
+
+.social-link:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Scroll to Top Button Styles */
+.scroll-to-top {
+  position: fixed; /* Fix position to the bottom right */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  background-color: #16423c; /* Dark teal background */
+  color: white; /* White icon color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Circular button */
+  width: 50px; /* Width */
+  height: 50px; /* Height */
+  display: none; /* Initially hidden */
+  align-items: center; /* Center icon */
+  justify-content: center; /* Center icon */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+.scroll-to-top:hover {
+  background-color: #007bff; /* Change color on hover */
+}
+
+.scroll-to-top i {
+  font-size: 1.5rem; /* Icon size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+  }
+  .info-item {
+    margin-bottom: 20px; /* Space below each item */
+  }
+}
+
+.footer {
+  position: relative; /* Make the footer position relative */
+  background-color: #16423c; /* Solid dark teal color */
+  color: white; /* Text color for better contrast */
+  text-align: center; /* Center-align the text */
+  padding: 1rem 0; /* Adjust padding as needed */
+}
+
+.footer::after {
+  content: "";
+  position: absolute; /* Position the overlay absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with transparency */
+  z-index: 0; /* Send the overlay behind the text */
+}
+
+.footer .container {
+  position: relative; /* Make the container relative */
+  z-index: 1; /* Ensure text appears above overlay */
+}
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // This enables smooth scrolling
+  });
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  display: none; /* Initially hidden */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 50%; /* Circular shape */
+  padding: 10px; /* Padding for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  z-index: 1000; /* Make sure it's on top of other elements */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.scroll-to-top:hover {
+  background-color: rgba(0, 0, 0, 1); /* Darker on hover */
 }
 

@@ -1,0 +1,181 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/staff.css">
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3 navbar-custom">
+        <div class="container-fluid">
+           
+            <a class="navbar-brand d-flex align-items-center ms-5" href="index.html">
+                <img src="img/logs.png" alt="HoBo Logo" height="40" width="70px">
+                 <!-- Added a span for the brand name -->
+            </a>
+            <h3 class="ps-5 mb-0 ms-5 ps-4 text-white"> Staff's Dashboard</h3>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <a href="login.html" class="btn btn-outline-light ms-3">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Sidebar and Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 bg-sidebar p-0 sidebar-custom" id="sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column text-white p-3">
+                        
+                            <div class="text-center mb-3" ><img src="img/111.jpg" alt="description" class="rounded-image"></div>
+                        <!-- Button to Open Modal -->
+                         <h5 id="staffname" class="ms-3">John Kenneth Mabale</h5>
+                         <br>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main role="main" class="col-md-10 ms-sm-auto px-4 py-4">
+                <!-- Overview -->
+                <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Overview</h1>
+                </div>
+
+                <!-- Statistics Cards with Animated Counters -->
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="card bg-custom- text-success shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Clients</h5>
+                                <p class="card-text display-4" id="totalClientCounter">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-custom-success text-success shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title">Available Rooms</h5>
+                                <p class="card-text display-4" id="roomsCounter">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-custom-info text-success shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title">Rooms Occupied</h5>
+                                <p class="card-text display-4" id="occupiedCounter">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-custom-warning text-success shadow-sm card-hover">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Reservations</h5>
+                                <p class="card-text display-4" id="reservationsCounter">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employee Table -->
+                <h2 class="mt-5"><b>ROOMS</b></h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Contact  #</th>
+                                <th>Check In</th>
+                                <th>Check Out</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>101</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><span class="badge bg-success">Available</span></td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>Lawrence Pag-iwayan</td>
+                                <td>09123456789</td>
+                                <td>October 3, 2024 - 13:00</td>
+                                <td>October 4, 2024 - 12:00</td>
+                                <td><span class="badge bg-warning">Occupied</span></td>
+                            </tr>
+                            <!-- More rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Edit Profile Modal -->
+<div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter new password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                    </div>
+                   
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/staff.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(38, 113, 117, 1) 0%,
+    rgba(22, 66, 60, 1) 100%
+  ); /* Gradient background */
+}
+
+header {
+  padding: 80px 20px; /* Adjusted padding for header */
+}
+
+h1,
+h2,
+h3 {
+  color: #ffffff; /* White color for headers in hero section */
+}
+
+.card {
+  border-radius: 15px; /* Rounded corners for cards */
+}
+
+.card-body {
+  text-align: center; /* Center the content in the card */
+}
+
+.card-body h3 {
+  margin-top: 20px; /* Space above heading in cards */
+}
+
+.card-body i {
+  color: #0d6efd; /* Primary color for icons */
+}
+
+footer {
+  background-color: #16423c; /* Dark teal footer */
+}
+
+section.bg-light {
+  background-color: #f8f9fa !important; /* Ensure background is light for the call-to-action */
+}

@@ -53,3 +53,68 @@ $(document).ready(function() {
         $('#availabilityModal').modal('hide');
     });
 });
+$(document).ready(function() {
+    // Smooth scrolling for the About Us link
+    $('.navbar-nav .nav-link').on('click', function(event) {
+        // Check if the clicked link is the "About" link
+        if ($(this).attr('href') === '#about-us') {
+            event.preventDefault(); // Prevent default anchor click behavior
+            $('html, body').animate({
+                scrollTop: $('#about-us').offset().top // Scroll to the About Us section
+            },700); // Animation duration in milliseconds
+        }
+    });
+});
+
+$(window).on('scroll', function() {
+    $('.about-us-section').each(function() {
+        var top_of_object = $(this).offset().top;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        if (bottom_of_window > top_of_object) {
+            $(this).animate({'opacity': '1'}, 800); // Fade in
+        }
+    });
+});
+$(document).ready(function() {
+    // Smooth scrolling for the About Us link
+    $('.navbar-nav .nav-link').on('click', function(event) {
+        // Check if the clicked link is the "About" link
+        if ($(this).attr('href') === '#contact') {
+            event.preventDefault(); // Prevent default anchor click behavior
+            $('html, body').animate({
+                scrollTop: $('#contact').offset().top // Scroll to the About Us section
+            },700); // Animation duration in milliseconds
+        }
+    });
+});
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This enables smooth scrolling
+    });
+}
+
+// Show or hide the "Scroll to Top" button based on scroll position
+window.onscroll = function() {
+    const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+    // Check if the page is scrolled down more than 100 pixels
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTopButton.style.display = 'flex'; // Show button
+    } else {
+        scrollToTopButton.style.display = 'none'; // Hide button
+    }
+};
+
+
+
+
+
+
+
+
+
+

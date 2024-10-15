@@ -9,6 +9,14 @@
   border-top: 20px solid white;
   margin: 20px auto;
 }
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid white; /* Reverses the direction */
+  margin: 0 auto;
+}
 
 .hero-section {
   position: relative; /* Ensure stacking with carousel */
@@ -35,6 +43,10 @@
   border-radius: 10px;
 }
 
+#hotel-list-section {
+  display: none;
+}
+
 .hero-section h1 {
   font-size: 3rem; /* Large title */
   color: #e9efec; /* Light color for contrast */
@@ -43,6 +55,15 @@
 .hero-section p {
   font-size: 1.25rem;
   color: #c4dad2; /* Light grayish teal for contrast */
+}
+
+.hotel-price {
+  font-size: 2rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: #28a745; /* Green color for the price */
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 0.25rem; /* Rounded corners */
+  display: inline-block; /* Make it inline-block for better positioning */
 }
 
 /* Background Carousel */
@@ -440,13 +461,6 @@ body {
 .footer .container {
   position: relative; /* Make the container relative */
   z-index: 1; /* Ensure text appears above overlay */
-}
-// Function to scroll to the top of the page
-function scrollToTop() {
-  window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // This enables smooth scrolling
-  });
 }
 
 .scroll-to-top {

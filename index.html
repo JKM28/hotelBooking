@@ -68,9 +68,12 @@
                 Whether you're here for business or leisure, our luxurious accommodations and world-class service 
                 ensure an unforgettable stay. Discover a blend of modern amenities and warm, local charm – book your 
                 stay today and elevate your Butuan City experience!</p>
-            <button id="browse-btn" class="btn btn-outline-light btn-lg">Browse Hotels</button>
+            <button id="browse-btn" class="btn btn-outline-light btn-lg">Browse Hotel</button>
             <div class="mt-3">
-                <div class="arrow-down"></div>
+                <!-- Custom Arrow Down Icon -->
+                <div id="arrow-container" class="mt-3">
+                    <div class="arrow-down"></div> <!-- Default arrow pointing down -->
+                </div>                
             </div>
         </div>
     </section>
@@ -78,51 +81,182 @@
     <!-- Image Gallery -->
     <section id="hotel-list-section" class="container my-5" style="display:none;">
         <div class="row g-4">
-            <!-- Hotel items... -->
-            <!-- Add your hotel items here as per your original code -->
-        </div>
-    </section>
-
-    <!-- Availability Modal -->
-    <div class="modal fade" id="availabilityModal" tabindex="-1" role="dialog" aria-labelledby="availabilityModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="availabilityModalLabel">Check Availability</h5>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <!-- Existing Hotel 1 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Oasis Hotel">
+                        <img src="img/oaisis.png" class="img-fluid rounded" alt="Oasis Hotel">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Oasis Hotel</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form id="availability-form">
-                        <div class="form-group">
-                            <label for="hotel-location">Location</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="hotel-location" value="Butuan City, Philippines" readonly>
-                                <div class="input-group-append">
-                                    <button type="button" class="btn custom-map-btn" id="see-map-btn">
-                                        <i class="bi bi-geo-alt-fill"></i> See in Maps
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="check-in-date">Check-in Date</label>
-                            <input type="date" class="form-control" id="check-in-date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="check-out-date">Check-out Date</label>
-                            <input type="date" class="form-control" id="check-out-date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="number-of-guests">Number of Guests</label>
-                            <input type="number" class="form-control" id="number-of-guests" min="1" required>
-                        </div>
-                        <input type="hidden" id="selected-hotel" name="selected-hotel">
-                        <button type="submit" class="btn custom-button mt-3">Check Availability</button>
-                    </form>
+            </div>
+            
+            <!-- Existing Hotel 2 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Inland Hotel">
+                        <img src="img/inland.png" class="img-fluid rounded" alt="Inland Hotel">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Inland Hotel</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 3 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Watergate Hotel">
+                        <img src="img/watergate.png" class="img-fluid rounded" alt="Watergate Hotel">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Watergate Hotel</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 4 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 4">
+                        <img src="img/inland.png" class="img-fluid rounded" alt="Hotel 4">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Hotel 4</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 5 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 5">
+                        <img src="img/oaisis.png" class="img-fluid rounded" alt="Hotel 5">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Hotel 5</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 6 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 6">
+                        <img src="img/watergate.png" class="img-fluid rounded" alt="Hotel 6">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Hotel 6</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 7 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Oasis Hotel">
+                        <img src="img/oaisis.png" class="img-fluid rounded" alt="Oasis Hotel">
+                    </a>
+                    
+                    <div class="overlay">
+                        <div class="text">Hotel 7</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Existing Hotel 8 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 8">
+                        <img src="img/background.png" class="img-fluid rounded" alt="Hotel 8">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Hotel 8</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+  <!-- Availability Modal -->
+<!-- First Modal -->
+<!-- Modal HTML -->
+<div class="modal fade" id="availabilityModal" tabindex="-1" role="dialog" aria-labelledby="availabilityModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="availabilityModalLabel">Check Availability</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="availability-form">
+                    <div class="form-group">
+                        <label for="hotel-location">Location</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="hotel-location" value="Butuan City, Philippines" readonly>
+                            <div class="input-group-append">
+                                <button type="button" class="btn custom-map-btn" id="see-map-btn">
+                                    <i class="bi bi-geo-alt-fill"></i> See in Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-in-date">Check-in Date</label>
+                        <input type="date" class="form-control" id="check-in-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out-date">Check-out Date</label>
+                        <input type="date" class="form-control" id="check-out-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number-of-guests">Number of Guests</label>
+                        <input type="number" class="form-control" id="number-of-guests" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hotel-price">Price from</label>
+                        <br>
+                        <span id="hotel-price" class="hotel-price">₱3,500</span> <!-- Display Price on new line -->
+                    </div>
+                    
+                    <input type="hidden" id="selected-hotel" name="selected-hotel">
+                    <button type="submit" class="btn custom-button mt-3">Check Availability</button>
+                </form>
+                <button id="confirm-btn" type="button" class="btn btn-success mt-3" style="display:none;">Confirm Booking</button>
+            </div>
+        </div>
     </div>
+</div>
+
+
+
+
+
+<!-- Second Modal -->
+<div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="mapModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="mapModalLabel">Map Location</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="map-iframe" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- About Us Section -->
     <section id="about-us" class="about-section py-5">
@@ -161,7 +295,7 @@
                 <div class="info-item">
                     <i class="bi bi-geo-alt"></i>
                     <h4>Location</h4>
-                    <p>123 Main St, Suite 100<br>City, State, ZIP</p>
+                    <p>Intino Building, North Montilla Boulevard Butuan City<br>Agusan Del Norte, 8600</p>
                 </div>
             </div>
 
@@ -180,10 +314,12 @@
         </div>
     </section>
 
+
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="btn btn-secondary rounded-circle" style="display: none; position: fixed; bottom: 20px; right: 20px;">
-        <i class="bi bi-chevron-up"></i>
-    </button>
+<button id="scroll-to-top" class="btn btn-secondary rounded-circle"  onclick="scrollToTop()">
+    <i class="bi bi-chevron-up"></i>
+</button>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>

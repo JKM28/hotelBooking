@@ -173,7 +173,7 @@
                 </div>
             </div>
 
-            <!-- Existing Hotel 8 -->
+            <!-- Existing Hotel 9 -->
             <div class="col-md-4">
                 <div class="img-container">
                     <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 8">
@@ -185,6 +185,20 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Existing Hotel 9 -->
+            <div class="col-md-4">
+                <div class="img-container">
+                    <a href="#" data-toggle="modal" data-target="#availabilityModal" data-hotel="Hotel 9">
+                        <img src="img/background.png" class="img-fluid rounded" alt="Hotel 9">
+                    </a>
+                    <div class="overlay">
+                        <div class="text">Hotel 9</div>
+                        <div class="details">Details</div> <!-- New details text -->
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -228,7 +242,7 @@
                         <br>
                         <span id="hotel-price" class="hotel-price">₱3,500</span> <!-- Display Price on new line -->
                     </div>
-                    
+                    <button type="button" class="btn btn-info mt-3 float-end" id="gallery-btn">Gallery</button>
                     <input type="hidden" id="selected-hotel" name="selected-hotel">
                     <button type="submit" class="btn custom-button mt-3">Check Availability</button>
                 </form>
@@ -239,6 +253,22 @@
 </div>
 
 
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galleryModalLabel">Hotel Gallery</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="gallery-images">
+                    <!-- Images will be dynamically injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
